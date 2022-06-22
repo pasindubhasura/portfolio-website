@@ -1,7 +1,10 @@
-function App() {
+import React from 'react';
+import { Home } from "./pages";
+import './App.css'
+const App = () => {
   return (
-    <div>
-      <h2>Hello😜</h2>
+    <div >
+      <Home />
     </div>
   );
 }
