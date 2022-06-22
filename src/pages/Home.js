@@ -1,9 +1,12 @@
 import React from 'react'
-import { Welcome } from '../components';
+import { Technologies, Welcome } from '../components';
 
 const Home = () => {
     return (
-        <div><Welcome /></div>
+        <div style={{ backgroundColor: '#121212' }}>
+            <Welcome />
+            <Technologies />
+        </div>
     )
 }
 

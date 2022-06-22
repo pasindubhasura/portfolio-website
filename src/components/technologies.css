@@ -1,0 +1,33 @@
+.technologies-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  padding: 0px 20px;
+}
+.cards {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 20px;
+  margin: 50px 0;
+}
+
+.cards_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
+  border-radius: 12px;
+}
+
+.name {
+  margin-top: 10px;
+  background-color: transparent;
+}
+
+.tech-image {
+  /* background-color: transparent; */
+}

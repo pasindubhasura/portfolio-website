@@ -1,3 +1,4 @@
 import Welcome from "./Welcome";
+import Technologies from './Technologies'
 
-export { Welcome }
+export { Welcome, Technologies }
