@@ -1,8 +1,8 @@
-function App() {
+import { Home } from "./components";
+
+const App = () => {
   return (
-    <div>
-      <h2>Hello😜</h2>
-    </div>
+    <Home />
   );
 }
 
