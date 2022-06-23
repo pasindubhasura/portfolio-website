@@ -19,8 +19,11 @@ function Technologies() {
 }
 
 const TechnologyItem = ({ image, name }) => {
+    const onTechnologyClick = () => {
+        alert(name)
+    };
     return (
-        <div className="cards_item">
+        <div className="cards_item" onClick={onTechnologyClick}>
             <img alt={name} src={image} height="70%" className="tech-image" />
             <h4 className="name">{name}</h4>
         </div>

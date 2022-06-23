@@ -21,6 +21,11 @@
   align-items: center;
   background-color: #242424;
   border-radius: 12px;
+  cursor: pointer;
+}
+
+.cards_item:hover {
+  background-color: #474747;
 }
 
 .name {
