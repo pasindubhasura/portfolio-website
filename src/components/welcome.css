@@ -1,12 +1,16 @@
 .container {
-  height: 600px;
+  height: 100vh;
 }
 
 .navBar {
-  background-color: #242424;
-  height: 50px;
+  height: 60px;
   display: flex;
   justify-content: flex-end;
+  -webkit-box-shadow: 0px 4px 33px -17px rgba(105, 105, 105, 1);
+  -moz-box-shadow: 0px 4px 33px -17px rgba(105, 105, 105, 1);
+  box-shadow: 0px 4px 33px -17px rgba(105, 105, 105, 1);
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .navBar-item {
@@ -19,5 +23,42 @@
 }
 
 .navBar-item:hover {
-  background-color: #121212;
+  background-color: #e9e9e9;
+}
+
+.banner-container {
+  height: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  margin-left: 70px;
+  height: 460px;
+  border-radius: 230px;
+  border: 5px black solid;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.profile-image:hover {
+  cursor: pointer;
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  transform: scale(1.025);
+}
+
+.banner-name {
+  font-size: 72px;
+}
+
+.banner-profession {
+  font-size: 24px;
+}
+
+.banner-text-container {
+  text-align: center;
 }

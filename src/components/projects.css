@@ -1,0 +1,79 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 20px 100px 20px;
+}
+.project-cards {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 300px;
+  gap: 30px;
+}
+
+.project-cards-item {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  -webkit-box-shadow: 16px 9px 42px -16px rgba(105, 105, 105, 1);
+  -moz-box-shadow: 16px 9px 42px -16px rgba(105, 105, 105, 1);
+  box-shadow: 16px 9px 42px -16px rgba(105, 105, 105, 1);
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.project-cards-item:hover {
+  cursor: pointer;
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  transform: scale(1.025);
+}
+
+.project-image {
+  width: 100%;
+  height: 70%;
+  border-radius: 12px 12px 0px 0px;
+  object-fit: cover;
+}
+
+.project-technology-tag {
+  border: 1px black solid;
+  border-radius: 15px;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+.project-tags-container {
+  display: flex;
+}
+
+.project-name {
+  margin: 10px 0px;
+}
+
+.project-card-body {
+  height: 100%;
+  padding: 0px 10px;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.Modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  background-color: papayawhip;
+}

@@ -3,9 +3,9 @@ import './technologies.css';
 import { technologies } from '../data';
 
 
-function Technologies() {
+const Technologies = ({ technologyRef }) => {
     return (
-        <div className="technologies-container">
+        <div className="technologies-container" ref={technologyRef}>
             <h2>Technologies</h2>
             <div className="cards">
                 {technologies.map((item, index) => {
@@ -19,13 +19,10 @@ function Technologies() {
 }
 
 const TechnologyItem = ({ image, name }) => {
-    const onTechnologyClick = () => {
-        alert(name)
-    };
     return (
-        <div className="cards_item" onClick={onTechnologyClick}>
+        <div className="cards_item">
             <img alt={name} src={image} height="70%" className="tech-image" />
-            <h4 className="name">{name}</h4>
+            <h3 className="name">{name}</h3>
         </div>
     );
 }
