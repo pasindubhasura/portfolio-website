@@ -1,13 +1,19 @@
 import React from 'react'
+import ReactModal from 'react-modal';
 import "./projectModal.css";
 
-const ProjectModal = () => {
+const ProjectModal = ({ isVisible, closeModal, children }) => {
     return (
-        <div className="modal-container">
-            <div className="modal">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nulla commodi distinctio, sunt iure reprehenderit error tempora ipsa aspernatur voluptas voluptate eaque atque aliquam ut accusantium voluptatum vel incidunt assumenda!
-            </div>
-        </div>
+        <ReactModal
+            ariaHideApp={false}
+            isOpen={isVisible}
+            onRequestClose={closeModal}
+            overlayClassName="Overlay"
+            className="Modal"
+            contentLabel="Example Modal"
+        >
+            {children}
+        </ReactModal>
     )
 }
 

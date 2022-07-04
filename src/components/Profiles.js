@@ -5,7 +5,7 @@ import "./profiles.css";
 const Profiles = ({ profileRef }) => {
     return (
         <div className="profile-container" ref={profileRef}>
-            <h2>Profiles</h2>
+            <h1 className="profile-title">Profiles</h1>
             <div className="profile-cards">
                 {profiles.map((item, index) => {
                     return (
@@ -25,7 +25,7 @@ const ProfileItem = ({ name, image, url }) => {
     return (
         <div className="profile-item" onClick={itemPress}>
             <img alt={name} src={image} className="profile-item-image" />
-            <p>{name}</p>
+            <h3>{name}</h3>
         </div>
     );
 }

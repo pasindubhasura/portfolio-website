@@ -6,7 +6,7 @@ import { technologies } from '../data';
 const Technologies = ({ technologyRef }) => {
     return (
         <div className="technologies-container" ref={technologyRef}>
-            <h2>Technologies</h2>
+            <h1>Technologies</h1>
             <div className="cards">
                 {technologies.map((item, index) => {
                     return (

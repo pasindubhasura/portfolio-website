@@ -1,13 +1,14 @@
 import React, { useRef, useState } from 'react'
-import { Footer, Profiles, Projects, Technologies, Welcome } from '../components';
-import Modal from 'react-modal';
+import { Footer, Profiles, ProjectModal, Projects, Technologies, Welcome } from '../components';
 import '../components/projects.css';
+import { projects } from '../data';
 
 const Home = () => {
     const technologyRef = useRef(null);
     const projectRef = useRef(null);
     const profileRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
+    const [currentProject, setCurrentProject] = useState({})
 
     const onTechnologyPress = () => {
         technologyRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -21,42 +22,51 @@ const Home = () => {
         profileRef.current.scrollIntoView({ behavior: 'smooth' });
     }
 
-    const openModal = () => {
+    const openModal = projectId => {
+        const currentProject = projects.find(p => p.id === projectId);
+        setCurrentProject(currentProject);
         setIsVisible(true);
     }
 
     const closeModal = () => {
         setIsVisible(false);
+        setCurrentProject({});
     }
 
-    const modalStyle = {
-        content: {
-            top: '50%',
-            left: '50%',
-            right: 'auto',
-            bottom: 'auto',
-            marginRight: '-50%',
-            transform: 'translate(-50%, -50%)',
-        },
-    }
     return (
-        <div style={{ backgroundColor: '#fff' }}>
+        <div style={{ backgroundColor: '#fff', position: 'relative', }}>
             <Welcome onTechnologyPress={onTechnologyPress} onProjectPress={onProjectPress} onProfilesPress={onProfilesPress} />
             <Technologies technologyRef={technologyRef} />
-            <Modal
-                isOpen={isVisible}
-                onRequestClose={closeModal}
-                overlayClassName="Overlay"
-                className="Modal"
-                contentLabel="Example Modal"
+            <ProjectModal
+                isVisible={isVisible}
+                closeModal={closeModal}
             >
-                <h3>Heloo</h3>
-            </Modal>
-            <Projects projectRef={projectRef} openModal={openModal} />
+                <ProjectItem currentProject={currentProject} />
+            </ProjectModal>
+            <Projects projectRef={projectRef} openModal={projectId => openModal(projectId)} />
             <Profiles profileRef={profileRef} />
             <Footer />
         </div>
     )
+}
+
+const ProjectItem = ({ currentProject }) => {
+    return (
+        <div className="project-item-container">
+            <img src={currentProject.image} className="project-item-image" alt="project-item" />
+            <div className="project-item-description">
+                <h1 className="project-item-title">{currentProject.projectName}</h1>
+                <div className="flex-left">
+                    {currentProject?.technologies?.map(t => {
+                        return (
+                            <div className="project-technology-tag">{t}</div>
+                        )
+                    })}
+                </div>
+                <p className="project-description">{currentProject.description}</p>
+            </div>
+        </div>
+    );
 }
 
 export default Home;
