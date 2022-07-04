@@ -79,7 +79,7 @@ const projects = [
     "projectName": "Movie Ticket System",
     "technologies": ["ReactJs", "NodeJs", "ExpressJs", "MongoDB"],
     "image": project4,
-    "description": "This is a group project that is created with MERN stack. In this system can create user accounts, add movies to cart and buy QR based tickets. In this system, I've developed user login/registration, add to cart and ticket purchasing functionality. When a user buys a ticket they will redirected to Stripe payment gateway and when they make the payment they will receive an confirmation email with order details with the QR code that they can use to check order details."
+    "description": "This is a group project that is created with MERN stack. In this system can create user accounts, add movies to cart and buy QR based tickets. In this system, I've developed user login/registration, add to cart and ticket purchasing functionalities. When a user buys a ticket they will redirected to Stripe payment gateway and when they make the payment they will receive an confirmation email with order details with the QR code that they can use to check order details."
   },
   {
     "id": 5,
