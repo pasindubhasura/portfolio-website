@@ -54,7 +54,7 @@ const technologies = [
 const projects = [
   {
     "id": 1,
-    "projectName": "CookMore - Android Recipe App (Published)",
+    "projectName": "CookMore - Android Recipe App",
     "technologies": ["React Native", "Redux", "NodeJs", "MongoDB"],
     "image": project1,
     "description": "This is an Android application built with React Native. It also used a REST API to fetch data which is also created by me using NodeJs and ExpressJs. Further, Redux is also used with MongoDB as the database. This application is published on Google Play Store."
