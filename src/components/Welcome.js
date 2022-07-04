@@ -14,6 +14,7 @@ const Welcome = ({ onTechnologyPress, onProjectPress, onProfilesPress }) => {
                 <div className="banner-text-container">
                     <h1 className="banner-name">Pasindu Bhasura</h1>
                     <h4 className="banner-profession">- Software Engineer Undergraduate -</h4>
+                    <p className="banner-description">Software Engineer undergraduate who is passionate and curious about developing and programming. Highly motivated with a willingness to learn about new technologies with a can-do mindset.</p>
                 </div>
                 <img src={profile} className="profile-image" alt="profile" />
             </div>

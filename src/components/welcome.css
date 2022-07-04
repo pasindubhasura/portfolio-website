@@ -61,4 +61,8 @@
 
 .banner-text-container {
   text-align: center;
+  width: 50%;
+}
+.banner-description {
+  margin-top: 10px;
 }
