@@ -41,3 +41,19 @@
 .tech-image {
   /* background-color: transparent; */
 }
+
+@media (max-width: 720px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 200px;
+    gap: 30px;
+    margin-top: 25px;
+  }
+  .technologies-container {
+    margin: 80px 20px 0px 20px;
+  }
+  .name {
+    font-size: 21px;
+  }
+}

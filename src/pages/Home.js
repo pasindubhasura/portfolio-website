@@ -34,7 +34,7 @@ const Home = () => {
     }
 
     return (
-        <div style={{ backgroundColor: '#fff', position: 'relative', }}>
+        <div style={{ backgroundColor: '#fff', position: 'relative', }} className="home-container">
             <Welcome onTechnologyPress={onTechnologyPress} onProjectPress={onProjectPress} onProfilesPress={onProfilesPress} />
             <Technologies technologyRef={technologyRef} />
             <ProjectModal
@@ -55,7 +55,7 @@ const ProjectItem = ({ currentProject }) => {
         <div className="project-item-container">
             <img src={currentProject.image} className="project-item-image" alt="project-item" />
             <div className="project-item-description">
-                <h1 className="project-item-title">{currentProject.projectName}</h1>
+                <h2 className="project-item-title">{currentProject.projectName}</h2>
                 <div className="flex-left">
                     {currentProject?.technologies?.map(t => {
                         return (
