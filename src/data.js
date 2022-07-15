@@ -54,17 +54,17 @@ const technologies = [
 const projects = [
   {
     "id": 1,
-    "projectName": "CookMore - Android Recipe App",
-    "technologies": ["React Native", "Redux", "NodeJs", "MongoDB"],
-    "image": project1,
-    "description": "This is an Android application built with React Native. It also used a REST API to fetch data which is also created by me using NodeJs and ExpressJs. Further, Redux is also used with MongoDB as the database. This application is published on Google Play Store."
-  },
-  {
-    "id": 2,
     "projectName": "Research Projects Management System",
     "technologies": ["ReactJs", "NodeJs", "ExpressJs", "MongoDB"],
     "image": project2,
     "description": "This is a group project that was developed by my colleagues for a university project at SLIIT. In this project I've developed Login/Registration, a chat system for students to chat with their supervisors and more components. MERN stack was used to developed this system along with Firebase and WebSocket libraries."
+  },
+  {
+    "id": 2,
+    "projectName": "Recipe App(Published on PlayStore)",
+    "technologies": ["React Native", "Redux", "NodeJs", "MongoDB"],
+    "image": project1,
+    "description": "This is an Android application built with React Native. It also used a REST API to fetch data which is also created by me using NodeJs and ExpressJs. Further, Redux is also used with MongoDB as the database. This application is published on Google Play Store."
   },
   {
 
