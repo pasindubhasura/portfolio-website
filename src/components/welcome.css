@@ -97,7 +97,7 @@
     width: 100%;
     display: flex;
     padding-right: 20px;
-    justify-content: end;
+    justify-content: flex-end;
     font-weight: bold;
   }
   .banner-container {
