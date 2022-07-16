@@ -66,15 +66,11 @@
 
 .project-item-image {
   border-radius: 12px;
-  max-width: 35%;
+  width: 35%;
+  max-height: 90%;
   margin: 0px 20px;
   object-fit: cover;
-  height: 90%;
   background-color: #fff;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -107,6 +103,7 @@
 .flex-left {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .project-title {
@@ -133,23 +130,20 @@
 @media (max-width: 880px) {
   .project-item-container {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     overflow-y: scroll;
     overflow-x: hidden;
-    min-height: 100%t;
-  }
-  .flex-left {
-    /* display: flex;
-    justify-content: center; */
+    height: 100%;
   }
   .project-item-description {
     max-width: 90%;
     margin-bottom: 30px;
+    height: auto;
   }
   .project-title {
     margin-top: 80px;
     margin-bottom: 15px;
+  }
+  .project-item-title {
   }
   .project-cards {
     gap: 50px;
@@ -157,7 +151,9 @@
     grid-template-columns: repeat(1, 1fr);
   }
   .project-item-image {
-    margin-top: 20px;
+    margin-top: 100px;
+    width: auto;
+    height: 100px;
     margin-bottom: 20px;
   }
   .project-technology-tag {
@@ -167,5 +163,37 @@
     min-width: fit-content;
     /* flex-basis: 100%;
     flex-wrap: wrap; */
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .project-technology-tag {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .project-item-title {
+    font-size: 16px;
+    text-align: center;
+  }
+  .project-item-description p {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 382px) {
+  .project-description {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .project-item-image {
+    margin-top: 150px;
+    width: auto;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  .project-description {
+    font-size: 14px;
   }
 }
